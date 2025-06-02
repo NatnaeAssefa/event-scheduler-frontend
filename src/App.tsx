@@ -42,11 +42,6 @@ function ProtectedRoute({ children }: ProtectedRouteProps) {
   return isAuthenticated ? <>{children}</> : <Navigate to="/login" />;
 }
 
-function PrivateRoute({ children }: { children: React.ReactNode }) {
-  const { isAuthenticated } = useAuth();
-  return isAuthenticated ? <>{children}</> : <Navigate to="/login" />;
-}
-
 function AppContent() {
   return (
     <Router>

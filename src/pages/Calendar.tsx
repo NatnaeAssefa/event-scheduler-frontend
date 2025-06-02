@@ -24,16 +24,13 @@ const localizer = dateFnsLocalizer({
 
 export default function Calendar() {
   const [events, setEvents] = useState<Event[]>([]);
-  const [loading, setLoading] = useState(true);
   const [currentDate, setCurrentDate] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
   const [openEventForm, setOpenEventForm] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState<Event | null>(null);
-  const navigate = useNavigate();
 
   const fetchEvents = async () => {
     try {
-      setLoading(true);
       // Calculate the start and end dates for a 3-month window centered on the current month
       const startDate = new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1);
       const endDate = new Date(currentDate.getFullYear(), currentDate.getMonth() + 2, 0);
@@ -53,7 +50,6 @@ export default function Calendar() {
     } catch (error) {
       console.error('Error fetching events:', error);
     } finally {
-      setLoading(false);
     }
   };
 
@@ -61,13 +57,6 @@ export default function Calendar() {
     fetchEvents();
   }, [currentDate]);
 
-  const handlePrevMonth = () => {
-    setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() - 1));
-  };
-
-  const handleNextMonth = () => {
-    setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() + 1));
-  };
 
   const handleSelectEvent = (event: Event) => {
     setSelectedEvent(event);

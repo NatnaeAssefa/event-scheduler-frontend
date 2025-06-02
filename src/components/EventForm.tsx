@@ -17,7 +17,7 @@ import {
   Divider,
 } from '@mui/material';
 import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
-import { Event, EventFormData, RecurrenceFrequency, WeekDay } from '@/types/event';
+import { EventFormData, RecurrenceFrequency, WeekDay } from '@/types/event';
 
 interface EventFormProps {
   open: boolean;
