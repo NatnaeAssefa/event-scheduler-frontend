@@ -1,0 +1,83 @@
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Calendar styles */
+.rbc-calendar {
+  min-height: 600px;
+}
+
+.rbc-event {
+  background-color: #1976d2;
+  border-radius: 4px;
+}
+
+.rbc-event.rbc-selected {
+  background-color: #1565c0;
+}
+
+.rbc-today {
+  background-color: rgba(25, 118, 210, 0.1);
+}
+
+.rbc-toolbar button {
+  color: #1976d2;
+  border: 1px solid #1976d2;
+  border-radius: 4px;
+  padding: 6px 12px;
+  margin: 0 4px;
+}
+
+.rbc-toolbar button:hover {
+  background-color: rgba(25, 118, 210, 0.1);
+}
+
+.rbc-toolbar button.rbc-active {
+  background-color: #1976d2;
+  color: white;
+}
+
+/* Form styles */
+.MuiFormControl-root {
+  margin-bottom: 16px;
+}
+
+/* Card styles */
+.MuiCard-root {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Button styles */
+.MuiButton-root {
+  text-transform: none;
+  font-weight: 500;
+}
+
+/* TextField styles */
+.MuiTextField-root {
+  margin-bottom: 16px;
+}
+
+/* Typography styles */
+.MuiTypography-h4 {
+  font-weight: 600;
+}
+
+.MuiTypography-h5 {
+  font-weight: 500;
+} 
